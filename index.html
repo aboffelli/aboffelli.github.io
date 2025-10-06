@@ -3,49 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-
-        .construction-container {
-            text-align: center;
-            max-width: 600px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        p {
-            color: #777;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 20px;
-        }
-    </style>
+    <title>Home | Bioinformatics Portfolio</title>
+    <!-- Link to fontawesome for inserting social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="construction-container">
-        <img src="images/construction-icon.png" alt="Under Construction">
-        <h1>Website Under Construction</h1>
-        <p>We're working hard to bring you an amazing website. Please check back later!</p>
-    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="#home" class="logo">Bio<span>Portfolio</span></a>
+        <ul class="nav-links">
+            <li><a href="#home" >Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Hero section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Bioinformatician</h1>
+            <p>Text to write</p>
+            <p class="highlight">Highlight text</p>
+            <a href="#contact" class="cta-button">Contact Me</a>
+        </div>
+        <div class="hero-image">
+            <img src="images/profile.jpg" alt="Profile Photo" class="profile-img">
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2>Technical Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fas fa-code"></i>
+                <h3>Programming</h3>
+                <p>R, Python, Bash</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-database"></i>
+                <h3>Data Analysis</h3>
+                <p>tidyverse, Pandas, NumPy</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-cogs"></i>
+                <h3>Workflow Management</h3>
+                <p>Snakemake</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-cloud"></i>
+                <h3>Version Control</h3>
+                <p>Git, GitHub</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-server"></i>
+                <h3>Operating Systems</h3>
+                <p>Linux</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Arthur Boffelli Castro. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+    
+    <!-- Link to javascript file -->
+    <script src="script.js"></script>
 </body>
 </html>
-
