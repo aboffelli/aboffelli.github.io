@@ -14,6 +14,7 @@
         <a href="#home" class="logo">Portifolio</a>
         <ul class="nav-links">
             <li><a href="#home" >Home</a></li>
+            <li><a href="#about"> About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -35,35 +36,70 @@
             <img src="images/profile.jpg" alt="Profile Photo" class="profile-img">
         </div>
     </section>
+
+    <!-- About me section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>
+            I am a PhD student at Lund University, working in Functional Breast Cancer Genomics. 
+            My research focuses on integrating multi-omics data to better understand tumor biology. 
+            I combine computational analysis, workflow automation, and high-performance computing to handle large-scale datasets efficiently. 
+            In addition to my research, I have experience as a systems administrator, managing Linux servers and deploying pipelines for reproducible analyses.
+        </p>
+    </section>
     
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <h2>Technical Expertise</h2>
         <div class="skills-grid">
+            
+            <div class="skill-card">
+                <i class="fas fa-dna"></i>
+                <h3>Bioinformatics</h3>
+                <p>Gene Expression, Variant Analysis<p>
+            </div>
+            
             <div class="skill-card">
                 <i class="fas fa-code"></i>
                 <h3>Programming</h3>
-                <p>R, Python, Bash</p>
+                <p>R, Python</p>
             </div>
+            
             <div class="skill-card">
                 <i class="fas fa-database"></i>
                 <h3>Data Analysis</h3>
-                <p>tidyverse, Pandas, NumPy</p>
+                <p>tidyverse, Pandas</p>
             </div>
+            
             <div class="skill-card">
                 <i class="fas fa-cogs"></i>
                 <h3>Workflow Management</h3>
-                <p>Snakemake</p>
+                <p>Snakemake, Conda</p>
             </div>
+            
             <div class="skill-card">
                 <i class="fas fa-cloud"></i>
                 <h3>Version Control</h3>
                 <p>Git, GitHub</p>
             </div>
+            
             <div class="skill-card">
-                <i class="fas fa-server"></i>
-                <h3>Operating Systems</h3>
-                <p>Linux</p>
+                <i class="fas fa-network-wired"></i>
+                <h3>Automation & Systems</h3>
+                <p>Linux, Ansible, Server Management</p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-terminal"></i>
+                <h3>Command-line & HPC</h3>
+                <p>Bash scripting, AWK, SLURM</p>
+            </div>
+            
+            
+            <div class="skill-card">
+                <i class="fas fa-globe"></i>
+                <h3>Web Tools</h3>
+                <p>HTML, CSS, Shiny</p>
             </div>
         </div>
     </section>
@@ -97,15 +133,16 @@
 
 
     <!-- Contact -->
-
     <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <form action="https://formspree.io/f/myzndwbw" method="POST" class="contact-form">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="_replyto" placeholder="Your Email" required>
-            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+        <div class="contact-container">
+            <h2>Contact Me</h2>
+            <form action="https://formspree.io/f/myzndwbw" method="POST" class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="_replyto" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
     </section>
 
     <!-- Footer -->
