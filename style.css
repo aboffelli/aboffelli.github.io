@@ -87,7 +87,19 @@ section {
     display: flex;
     align-items: center;
     padding: 12% 5%;
-    background: radial-gradient(circle at 75% 30%, var(--accent-glow) 0%, transparent 30%);
+    background: radial-gradient(circle at 75% 30%, var(--accent-glow) 0%, transparent 40%);
+    animation: fadeInUp 1.2s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-content{
@@ -108,7 +120,7 @@ section {
     object-fit: cover;
     border: 3px solid var(--accent);
     box-shadow: 0 0 50px var(--accent-glow);
-    animation: float 3s ease-in-out infinite;
+    animation: float 6s ease-in-out infinite;
     filter: grayscale(0.2) contrast(1.1);
 }
 
@@ -124,18 +136,33 @@ section {
 .hero h1{
     font-size: 4rem;
     margin-bottom: 1.5rem;
-    background: linear-gradient(45deg, var(--accent), 30%, #ffffff 70%);
+    background: linear-gradient(90deg, var(--accent), #aaf0c5, #ffffff, var(--accent));
+    background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: gradientMove 18s ease-in-out infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .hero .subtitle {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 600;
-    background: linear-gradient(45deg, #ffffff 20%, var(--accent) 70%);
+    background: #fff;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 1rem;
+    line-height: 1.4;
 }
 
 .hero .division {
@@ -144,13 +171,15 @@ section {
     color: var(--text);        /* white text */
     opacity: 0.7;              /* subdued under the gradient */
     margin-bottom: 1.5rem;
+    line-height: 1.4;
 }
 
 .hero p{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 2rem;
     opacity: 0.9;
     max-width: 600px;
+    line-height: 1.4;
 }
 
 .cta-button{
@@ -198,6 +227,7 @@ section {
 }
 
 .about p {
+    margin-bottom: 1rem;
     font-size: 1.2rem;
     line-height: 1.6;
     opacity: 0.9;
@@ -327,7 +357,7 @@ section h2 {
 }
 
 .contact-container {
-    max-width: 600px;
+    max-width: 550px;
     margin: 0 auto;
 }
 
