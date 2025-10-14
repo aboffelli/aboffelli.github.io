@@ -24,7 +24,7 @@ body{
 }
 
 section {
-  scroll-margin-top: 40px;
+  scroll-margin-top: 50px;
 }
 
 /* Navigation */
@@ -51,6 +51,13 @@ section {
     padding-left: 2.5rem;
 }
 
+.logo img {
+    height: 60px;
+    width: auto;
+    display: block;
+    margin-left: 100px; 
+}
+
 .nav-links{
     display: flex;
     gap: 2rem;
@@ -58,6 +65,7 @@ section {
 }
 
 .nav-links a {
+    font-size: larger;
     color: var(--text);
     text-decoration: none;
     font-weight: 500;
@@ -80,6 +88,65 @@ section {
     width: 100%;
 }
 
+/* Hamburger button */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 768px) {
+
+    .nav-toggle {
+        display: block;          /* show hamburger */
+    }
+
+     .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgba(10,10,10,0.95);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, padding 0.4s ease;
+        padding: 0;
+        gap: 1rem;
+    }
+
+
+    .nav-links.active {
+        max-height: 500px;       /* expanded height */
+        padding: 1rem 0;
+    }
+
+    /* Make links full-width for mobile */
+    .nav-links a {
+        width: 100%;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* DESKTOP: keep original layout */
+@media (min-width: 769px) {
+    .nav-links {
+        position: static;
+        flex-direction: row;
+        gap: 2rem;
+        max-height: none;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+}
 
 /* Hero Section */
 .hero{
@@ -114,8 +181,8 @@ section {
 }
 
 .profile-img{
-    width: 480px;
-    height: 400px;
+    width: 440px;
+    height: 480px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--accent);
@@ -233,6 +300,12 @@ section {
     opacity: 0.9;
 }
 
+.about p.hobbies {
+    font-style: italic;
+    opacity: 0.8;
+    color: rgba(255,255,255,0.7); /* slightly lighter than main text */
+    margin-top: 1rem;
+}
 
 /* Skills section */
 .skills{
@@ -343,6 +416,11 @@ section h2 {
     text-decoration: none;
     font-weight: 600;
     transition: color 0.2s ease;
+    margin-right: 1.2rem;
+}
+
+.project-link:last-child {
+    margin-right: 0; /* no extra space at the end */
 }
 
 .project-link:hover {
@@ -451,10 +529,6 @@ footer {
     .profile-img{
         width: 280px;
         height: 280px;
-    }
-
-    .nav-links{
-        display: none;
     }
 
     .logo {

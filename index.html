@@ -11,7 +11,12 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <a href="#home" class="logo">Portifolio</a>
+        <a href="#home" class="logo">
+            <img src="images/abc_logo.png" alt="Arthur Boffelli Castro Logo">
+        </a>
+        <button class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
         <ul class="nav-links">
             <li><a href="#home" >Home</a></li>
             <li><a href="#about"> About</a></li>
@@ -33,7 +38,7 @@
             </a>
         </div>
         <div class="hero-image">
-            <img src="images/profile.jpg" alt="Profile Photo" class="profile-img">
+            <img src="images/anime_style_green.png" alt="Profile Photo" class="profile-img">
         </div>
     </section>
 
@@ -47,7 +52,7 @@
         <p>
             Alongside my research, I work as a systems administrator for the Bioinformatics Masters Programme at Lund University, maintaining the computational infrastructure used for teaching. I enjoy coding and building tools, whether it's exploring biological data, creating workflows, or helping students get the most out of our teaching infrastructure.
         </p>
-
+        <p class="hobbies">Outside of work, I enjoy playing tennis, practicing guitar, and drawing.</p>
 
 
     </section>
@@ -112,26 +117,141 @@
     <section id="projects" class="projects">
         <h2>Projects</h2>
         <div class="project-grid">
-            
+
+            <!-- 2023-2025 - ECC detection -->
             <div class="project-card">
-                <h3>Project Title 1</h3>
-                <p>Brief description of the project, technologies used, and outcomes.</p>
+                <h3>Enlarged Cancer Cell Detection</h3>
+                <p>
+                    Developed a pipeline for detecting enlarged cancer cell nuclei in breast cancer tissue microarray (TMA) images.  
+                    The workflow combines <em>QuPath</em> and <em>Stardist</em> for nuclear detection and feature extraction, with a Snakemake-based automation pipeline to streamline analysis.
+                </p>
+                <p>
+                    The project is ongoing and the pipeline will continue to be developed by other team members. The code is publicly available on GitHub.
+                </p>
+                <div class="project-tags">
+                    <span class="tag">Snakemake</span>
+                    <span class="tag">QuPath</span>
+                    <span class="tag">Stardist</span>
+                    <span class="tag">Image Analysis</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">R</span>
+                    <span class="tag">Bash</span>
+                    <span class="tag">AWK</span>
+                    <span class="tag">Groovy</span>
+
+
+                </div>
+                <a href="https://github.com/aboffelli/ecc-manual-analysis" class="project-link" target="_blank">
+                    Source Code <i class="fab fa-github"></i>
+                </a>
+            </div>
+
+             <!-- 2021 - Interomics -->
+            <div class="project-card">
+                <h3>Interomics</h3>
+                <p>A Shiny-based web application for metagenomic data exploration and visualization.
+                    Built in R using phyloseq, metacoder, and plotly, Interomics enables users to generate interactive diversity, abundance, and taxonomic tree plots directly from their data tables.
+                </p>
                 <div class="project-tags">
                     <span class="tag">R</span>
                     <span class="tag">Shiny</span>
+                    <span class="tag">metacoder</span>
+                    <span class="tag">phyloseq</span>
+                    <span class="tag">plotly</span>
                 </div>
-                <a href="#" class="project-link">View on GitHub</a>
+                <a href=" https://aboffelli.shinyapps.io/interomics/." class="project-link" target="_blank">
+                    Live App <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="https://github.com/aboffelli/interomics" class="project-link" target="_blank ">Source code <i class="fab fa-github"></i></a>
             </div>
             
+            <!-- 2022 - Runemark Lab -->
             <div class="project-card">
-                <h3>Project Title 2</h3>
-                <p>Brief description of the project, technologies used, and outcomes.</p>
+                <h3>Runemark Lab Website</h3>
+                <p>
+                    Designed and developed the official website for the Runemark Lab from scratch using HTML, CSS, and JavaScript.  
+                    I handled the design, setup, and deployment, creating a fully functional and publicly accessible site for the lab.
+                </p>
                 <div class="project-tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">Pandas</span>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Web Design</span>
                 </div>
-                <a href="#" class="project-link">View on GitHub</a>
+                <a href="https://runemarklab.com/" class="project-link" target="_blank">
+                    Visit Site <i class="fas fa-external-link-alt"></i>
+                </a>
             </div>
+
+            <!-- 2022-2023 - scWGS Data analysis -->
+            <div class="project-card">
+                <h3>Copy Number Analysis of scWGS Data</h3>
+                <p>
+                    Performed single-cell whole-genome sequencing (scWGS) analysis to investigate genomic instability in 
+                    drug-resilient breast cancer cells. This project contributed to the publication 
+                    <em>"Drug-resilient Cancer Cell Phenotype Is Acquired via Polyploidization Associated with Early Stress Response Coupled to HIF2α Transcriptional Regulation"</em>.
+                </p>
+                <p>
+                    The analysis pipeline was developed in Bash using established bioinformatics tools for alignment and copy number inference.
+                </p>
+                <div class="project-tags">
+                    <span class="tag">Bash</span>
+                    <span class="tag">bwa</span>
+                    <span class="tag">samtools</span>
+                    <span class="tag">eagle</span>
+                    <span class="tag">CHISEL</span>
+                </div>
+                <a href="https://aacrjournals.org/cancerrescommun/article/4/3/691/735078/Drug-resilient-Cancer-Cell-Phenotype-Is-Acquired" class="project-link" target="_blank">
+                    Publication <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="https://github.com/aboffelli/pacc-copy-number" class="project-link" target="_blank">
+                    Source Code <i class="fab fa-github"></i>
+                </a>
+            </div>
+
+            <!-- 2021-2022 - Synonymous variants project -->
+            <div class="project-card">
+                <h3>Identification of Functional Synonymous Variants in Breast Cancer</h3>
+                <p>
+                    Initially developed during my Master's thesis and now extended in my PhD, this computational pipeline identifies potentially functional synonymous variants across breast cancer cohorts.  
+                    The workflow integrates variant calling, annotation, and predictive modeling using GATK, VCFtools, VEP, MMSplice, and custom Python and R scripts.  
+                    The pipeline pinpointed candidate variants for experimental validation and forms the foundation for ongoing functional studies.
+                </p>
+                <div class="project-tags">
+                    <span class="tag">GATK</span>
+                    <span class="tag">VCFtools</span>
+                    <span class="tag">VEP</span>
+                    <span class="tag">MMSplice</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">R</span>
+                    <span class="tag">Breast Cancer</span>
+                </div>
+                <a href="https://github.com/aboffelli/variant_annotation" class="project-link" target="_blank">
+                    Source Code <i class="fab fa-github"></i>
+                </a>
+            </div>
+
+            <!-- 2025-present - Splicing factors project -->
+            <div class="project-card">
+                <h3>Deregulation of the Splicing Machinery in Breast Cancer</h3>
+                <p>
+                    This ongoing project investigates the expression and function of splicing factors across breast cancer subtypes using SCAN-B RNA-seq data. 
+                    The analysis integrates gene expression, alternative isoform usage, and somatic variant data to identify regulatory changes in splicing factors 
+                    and their potential impact on target gene networks.
+                </p>
+                <div class="project-tags">
+                    <span class="tag">R</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">RNA-seq</span>
+                    <span class="tag">edgeR</span>
+                    <span class="tag">Variant Calling</span>
+                </div>
+                <a href="#" class="project-link" title="Private Repository">
+                    Available upon request <i class="fas fa-lock"></i>
+                </a>
+            </div>
+
+           
         </div>
     </section>
 
@@ -151,7 +271,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Arthur Boffelli Castro. All rights reserved.</p>
+        <p>&copy; 2025 Arthur Boffelli Castro &mdash; designed & built by me</p>
         <div class="social-links">
             <a href="https://github.com/aboffelli" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/arthur-boffelli-castro" target="_blank"><i class="fab fa-linkedin"></i></a>

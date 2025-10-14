@@ -18,3 +18,19 @@
                 navbar.style.backgroundColor = 'rgba(10, 10, 10, 0.98)' :
                 navbar.style.backgroundColor = 'rgba(10, 10, 10, 0.95)';
         });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggle = document.querySelector('.nav-toggle');
+            const links = document.querySelector('.nav-links');
+            const linkItems = document.querySelectorAll('.nav-links a');
+
+            toggle.addEventListener('click', () => {
+                links.classList.toggle('active');
+            });
+
+            linkItems.forEach(link => {
+                link.addEventListener('click', () => {
+                    links.classList.remove('active');
+                });
+            });
+        });
